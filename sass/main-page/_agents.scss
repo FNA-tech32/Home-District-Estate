@@ -1,0 +1,107 @@
+.agent-section {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.agent {
+    padding: 12.8rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.6rem;
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: $color-general-3;
+    }
+
+    &__description {
+        color: $color-general-3;
+        font-size: 1.6rem;
+    }
+
+    &__img-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+
+        img {
+            width: 90%;
+            height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+// RESPONSIVE
+// TABLET
+@media (max-width: 75em) {
+    .agent {
+        padding: 10rem 1.8rem;
+        gap: 4rem;
+    }
+}
+
+// MOBILE
+@media (max-width: 56.25em) {
+    .agent {
+        text-align: center;
+        grid-template-columns: 1fr;
+        padding: 6.4rem 1.8rem;
+        gap: 3.2rem;
+        justify-content: center;
+
+        &__text-box {
+            gap: 1.6rem;
+        }
+
+        &__title,
+        &__description {
+            font-size: 1.5rem;
+        }
+
+        &__img-box {
+            grid-template-columns: 1fr;
+            gap: 1.4rem;
+
+            img {
+                width: 80%;
+            }
+        }
+    }
+}
+
+// SMALL MOBILE
+@media (max-width: 37.5em) {
+    .agent-section {
+        padding: 0 1.6rem;
+    }
+
+    .agent {
+        text-align: center;
+        padding: 6.4rem 1.4rem;
+        gap: 3.2rem;
+
+        &__text-box {
+            gap: 1.6rem;
+        }
+
+        &__title,
+        &__description {
+            font-size: 1.5rem;
+        }
+
+        &__img-box {
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+        }
+    }
+}
